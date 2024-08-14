@@ -48,7 +48,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="appSettingsUI.json">
+    <None Update="AppSettings\AppSettingsAPI\appSettingsAPI.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppSettings\AppSettingsUI\appSettingsUI.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Driver\PageObjectLib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
