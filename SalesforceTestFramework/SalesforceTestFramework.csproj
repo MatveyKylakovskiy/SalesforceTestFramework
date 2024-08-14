@@ -48,10 +48,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="AppSettings\AppSettingsAPI\appSettingsAPI.json">
+    <None Update="allureConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="AppSettings\AppSettingsUI\appSettingsUI.json">
+    <None Update="appSettingsAPI.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appSettingsUI.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Helpers\AllureAttributeHelper\allureAttributes.json">
