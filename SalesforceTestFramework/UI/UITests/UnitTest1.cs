@@ -1,4 +1,3 @@
-using Allure.Commons;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 
