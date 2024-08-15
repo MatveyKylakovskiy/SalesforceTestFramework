@@ -1,8 +1,7 @@
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
-using SalesforceTestFramework.Helpers;
 using SalesforceTestFramework.UI.Pages;
-using System.Collections;
+using static SalesforceTestFramework.Helpers.TestDataUI;
 
 namespace SalesforceTestFramework.UI.UITests
 {
