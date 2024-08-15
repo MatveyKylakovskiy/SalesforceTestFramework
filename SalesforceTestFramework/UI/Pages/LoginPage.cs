@@ -8,6 +8,7 @@ namespace SalesforceTestFramework.UI.Pages
         private static WebElements Login() => new(By.Id("username"));
         private static WebElements Password() => new(By.Id("password"));
         private static WebElements LoginButton() => new(By.Id("Login"));
+        private static WebElements HomeButton() => new(By.XPath("//span[@class='title slds-truncate' and text()='Home']"));
 
         public static void Login(string username, string password)
         {
@@ -15,5 +16,7 @@ namespace SalesforceTestFramework.UI.Pages
             Password().SendValue(password);
             LoginButton().Click();
         }
+
+        public static bool IsHomeButtonExist() => HomeButton().IsElementDisplayed();
     }
 }

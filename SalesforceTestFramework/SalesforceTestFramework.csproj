@@ -37,14 +37,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="PageObjectLib">
-      <HintPath>bin\Debug\net8.0\PageObjectLib.dll</HintPath>
-    </Reference>
+    <Folder Include="API\" />
+    <Folder Include="UI\Fields\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="API\" />
-    <Folder Include="UI\Fields\" />
+    <Reference Include="PageObjectLib">
+      <HintPath>UI\Driver\PageObjectLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -55,9 +55,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="appSettingsUI.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Helpers\AllureAttributeHelper\allureAttributes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="UI\Driver\PageObjectLib.dll">
