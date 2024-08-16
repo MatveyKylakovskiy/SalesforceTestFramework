@@ -12,7 +12,7 @@ namespace SalesforceTestFramework.UI.UITests
         public void Setup()
         {
             settingsUI = new SettingsUI();
-
+            
             Driver.CreateDriver(settingsUI.Driver);
             Driver.GoUrl(settingsUI.URL);
         }

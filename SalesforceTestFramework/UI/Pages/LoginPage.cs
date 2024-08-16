@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using PageObjectLib.Elements;
+using PageObjectLib.Factories;
 
 namespace SalesforceTestFramework.UI.Pages
 {
@@ -8,7 +9,10 @@ namespace SalesforceTestFramework.UI.Pages
         private static WebElements Login() => new(By.Id("username"));
         private static WebElements Password() => new(By.Id("password"));
         private static WebElements LoginButton() => new(By.Id("Login"));
-        private static WebElements HomeButton() => new(By.XPath("//span[@class='title slds-truncate' and text()='Home']"));
+
+        public static readonly string HomeButtonXpath = "//span[@class='title slds-truncate' and text()='Home']";
+        public static readonly string LogoIconXpath = "//*[@id='logo']";
+        public static readonly string ErrorMesageXpath = "//*[@id='error']";
 
         public static void Login(string username, string password)
         {
@@ -17,6 +21,7 @@ namespace SalesforceTestFramework.UI.Pages
             LoginButton().Click();
         }
 
-        public static bool IsHomeButtonExist() => HomeButton().IsElementDisplayed();
+        public static bool IsElementExist(By locator) => WebElements.IsElementDisplayed(locator);
+
     }
 }
