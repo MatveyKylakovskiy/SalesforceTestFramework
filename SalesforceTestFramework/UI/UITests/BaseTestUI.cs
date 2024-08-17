@@ -15,6 +15,7 @@ namespace SalesforceTestFramework.UI.UITests
             
             Driver.CreateDriver(settingsUI.Driver);
             Driver.GoUrl(settingsUI.URL);
+            LoginPage.Login(settingsUI.Login, settingsUI.Password);
         }
 
         [TearDown]

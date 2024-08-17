@@ -6,7 +6,7 @@ using SalesforceTestFramework.UI.Pages.NavigateButtons;
 namespace SalesforceTestFramework.UI.UITests
 {
     [AllureNUnit]
-    public class CreateAccountTests : BaseTestUI
+    public class AccountsPageTests : BaseTestUI
     {
         [Test]
         [Description("Login test Positive")]
@@ -17,7 +17,6 @@ namespace SalesforceTestFramework.UI.UITests
         [AllureLink("Website", "https://qatech5-dev-ed.develop.my.salesforce.com")]
         public void CreateAccountTest()
         {   
-            LoginPage.Login(settingsUI.Login, settingsUI.Password);
             HomePage.MoveToAccountsPage();
             BaseNavigate.CreateNewItem();
 

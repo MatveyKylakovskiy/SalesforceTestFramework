@@ -1,7 +1,8 @@
 ﻿using OpenQA.Selenium;
 using PageObjectLib.Elements;
+using SalesforceTestFramework.UI.Fields;
 
-namespace SalesforceTestFramework.UI.Pages.Fields.CreateAccountFields
+namespace SalesforceTestFramework.UI.Fields.CreateAccountFields
 {
     public class TypeField : BaseField
     {

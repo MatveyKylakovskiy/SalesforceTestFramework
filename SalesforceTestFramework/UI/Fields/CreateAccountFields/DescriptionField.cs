@@ -1,5 +1,6 @@
-﻿
-namespace SalesforceTestFramework.UI.Pages.Fields.CreateAccountFields
+﻿using SalesforceTestFramework.UI.Fields;
+
+namespace SalesforceTestFramework.UI.Fields.CreateAccountFields
 {
     public class DescriptionField : BaseField
     {

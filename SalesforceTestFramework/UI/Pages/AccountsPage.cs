@@ -1,6 +1,6 @@
 ﻿using PageObjectLib.Elements;
 using OpenQA.Selenium;
-using SalesforceTestFramework.UI.Pages.Fields.CreateAccountFields;
+using SalesforceTestFramework.UI.Fields.CreateAccountFields;
 
 namespace SalesforceTestFramework.UI.Pages
 {

@@ -6,6 +6,7 @@ namespace SalesforceTestFramework.UI.Pages.NavigateButtons
     internal class BaseNavigate
     {
         private static WebElements NewItemButton() => new(By.XPath("//*[@title='New']"));
+        private static WebElements NewContactButton() => new(By.XPath("//*[@name='NewContact']"));
         private static WebElements SaveEditButton() => new(By.XPath("//*[@name='SaveEdit']"));
         private static WebElements MenuItemButton() => new(By.XPath("//*[contains(@class, 'menu-button')]//button"));
         private static WebElements DeleteItemButton() => new(By.XPath("//*[@apiname='Delete']"));
@@ -13,6 +14,7 @@ namespace SalesforceTestFramework.UI.Pages.NavigateButtons
         private static WebElements ConfirmDeleteButton() => new(By.XPath("//button[@title='Delete']"));
         public static void SaveEdit() => SaveEditButton().Click();
         public static void CreateNewItem() => NewItemButton().Click();
+        public static void CreateNewContact() => NewContactButton().Click();
         public static void DeleteItem()
         {
             MenuItemButton().Click();
