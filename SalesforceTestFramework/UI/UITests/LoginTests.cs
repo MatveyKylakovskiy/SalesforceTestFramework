@@ -9,7 +9,6 @@ namespace SalesforceTestFramework.UI.UITests
     [AllureNUnit]
     public class LoginTests : BaseTestUI
     {
-
         [Test]
         [Description("Login test Positive")]
         [AllureIssue("UI-123")]
@@ -37,7 +36,7 @@ namespace SalesforceTestFramework.UI.UITests
         [Description("Empty Login. Not valid Password")]
         public void LoginTestNegative2()
         {
-            LoginPage.Login(string.Empty, RandomData.GenerateRandomString(8));
+            LoginPage.Login(string.Empty, RandomData.RandomString(8));
 
             Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.LogoIconXpath)), Is.True);
         }
@@ -64,7 +63,7 @@ namespace SalesforceTestFramework.UI.UITests
         [Description("Valid Login. Not valid Password")]
         public void LoginTestNegative5()
         {
-            LoginPage.Login(settingsUI.Login, RandomData.GenerateRandomString(8));
+            LoginPage.Login(settingsUI.Login, RandomData.RandomString(8));
 
             Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.ErrorMesageXpath)), Is.True);
         }
@@ -73,15 +72,9 @@ namespace SalesforceTestFramework.UI.UITests
         [Description("Not valid Login and Password")]
         public void LoginTestNegative6()
         {
-            LoginPage.Login(RandomData.GenerateRandomString(8), RandomData.GenerateRandomString(8));
+            LoginPage.Login(RandomData.RandomString(8), RandomData.RandomString(8));
 
             Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.ErrorMesageXpath)), Is.True);
         }
     }
 }
-
-
-
-
-
-

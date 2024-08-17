@@ -24,7 +24,7 @@ namespace SalesforceTestFramework.Helpers
                 // yield return new object[] { "", "", By.XPath(LoginPage.LogoIconXpath)};
 
                 //yield return new object[] { RandomData.RandomString(8), "", By.XPath(LoginPage.ErrorMesageXpath) };
-                yield return new object[] { RandomData.GenerateRandomString(9), "", By.XPath(LoginPage.ErrorMesageXpath) };
+                yield return new object[] { RandomData.RandomString(9), "", By.XPath(LoginPage.ErrorMesageXpath) };
 
                 // yield return new object[] { settingsUI.Login, RandomData.RandomString(8), By.XPath(LoginPage.ErrorMesageXpath) };
 

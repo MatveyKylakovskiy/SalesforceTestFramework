@@ -39,7 +39,7 @@
 
   <ItemGroup>
     <Folder Include="API\" />
-    <Folder Include="UI\Fields\" />
+    <Folder Include="UI\Pages\Fields\CreateContactFields\" />
   </ItemGroup>
 
   <ItemGroup>
