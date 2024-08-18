@@ -12,17 +12,21 @@ namespace SalesforceTestFramework.UI.Fields.CreateCaseFields
 
         private WebElements StatusValue(string value) => new(By.XPath($"//*[@data-value='{value}']"));
 
-        private WebElements TargetField() => new(By.XPath("//*[@aria-label='Status' and @role='combobox']"));
+        private WebElements StatusFieldButton() => new(By.XPath("//*[@aria-label='Status' and @role='combobox']"));
         public void SelectNew()
         {
-            TargetField().Click();
+            StatusFieldButton().Click();
             StatusValue("New");
         }
         public void SelectWorking()
         {
-            TargetField().Click();
+            StatusFieldButton().Click();
             StatusValue("Working").Click();
         }
-        public void SelectEscalated() => StatusValue("Escalated");
+        public void SelectEscalated()
+        {
+            StatusFieldButton().Click();
+            StatusValue("Escalated").Click();
+        }
     }
 }

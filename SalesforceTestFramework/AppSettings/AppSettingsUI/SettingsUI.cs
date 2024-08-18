@@ -7,6 +7,8 @@ namespace SalesforceTestFramework.AppSettings.AppSettingsUI
         public string URL { get; }
         public string Login { get; }
         public string Password { get; }
+        public string BaseAccountName { get; }
+        public string BaseContactName { get; }
 
         public SettingsUI()
         {
@@ -16,6 +18,8 @@ namespace SalesforceTestFramework.AppSettings.AppSettingsUI
             URL = ReadSettings("URL");
             Login = ReadSettings("Login");
             Password = ReadSettings("Password");
+            BaseAccountName = ReadSettings("BaseAccountName");
+            BaseContactName = ReadSettings("BaseContactName");
         }
     }
 }

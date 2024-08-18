@@ -14,8 +14,16 @@ namespace SalesforceTestFramework.UI.UITests
             BaseNavigate.CreateNewItem();
 
             CasesPage.StatusField.SelectWorking();
+            CasesPage.CaseOriginField.SelectEmail();
+            CasesPage.ContactNameField.InputDataToField(settingsUI.BaseContactName);
+            CasesPage.AccountNameField.InputDataToField(settingsUI.BaseAccountName);
+            CasesPage.SubjectField.InputDataToField("MyCase2");
+            
+            
 
-            Assert.Pass();
+            BaseNavigate.SaveEdit();
+
+            Assert.True(CasesPage.IsCaseCreated("MyCase2"));
             
         }
     }
