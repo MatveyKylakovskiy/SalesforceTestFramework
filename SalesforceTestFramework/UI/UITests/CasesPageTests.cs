@@ -1,4 +1,5 @@
 ﻿using NUnit.Allure.Core;
+using SalesforceTestFramework.Helpers;
 using SalesforceTestFramework.UI.Pages;
 using SalesforceTestFramework.UI.Pages.NavigateButtons;
 
@@ -7,9 +8,12 @@ namespace SalesforceTestFramework.UI.UITests
     [AllureNUnit]
     public class CasesPageTests : BaseTestUI
     {
+        [Description("Create Case Test")]
         [Test]
         public void CreateCaseTest()
         {
+            var subjectName = RandomData.RandomString(8);
+
             HomePage.MoveToCasesPage();
             BaseNavigate.CreateNewItem();
 
@@ -17,14 +21,11 @@ namespace SalesforceTestFramework.UI.UITests
             CasesPage.CaseOriginField.SelectEmail();
             CasesPage.ContactNameField.InputDataToField(settingsUI.BaseContactName);
             CasesPage.AccountNameField.InputDataToField(settingsUI.BaseAccountName);
-            CasesPage.SubjectField.InputDataToField("MyCase2");
+            CasesPage.SubjectField.InputDataToField(subjectName);
             
-            
-
             BaseNavigate.SaveEdit();
 
-            Assert.True(CasesPage.IsCaseCreated("MyCase2"));
-            
+            Assert.True(CasesPage.IsCaseCreated(subjectName));
         }
     }
 }

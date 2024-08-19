@@ -10,6 +10,6 @@ namespace SalesforceTestFramework.UI.Pages
         public static FirstNameField FirstNameField = new();
         public static LastNameField LastNameField = new();
 
-        public static bool IsContactCreated(string contactName) => WebElements.IsElementDisplayed(By.XPath($"//*[@slot='primaryField' and text()='{contactName}']"));
+        public static bool IsContactCreated(string firstName, string lastName) => WebElements.IsElementDisplayed(By.XPath($"//*[@slot='primaryField' and text()='{firstName} {lastName}']"));
     }
 }
