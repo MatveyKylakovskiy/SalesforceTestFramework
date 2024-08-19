@@ -9,10 +9,10 @@ namespace SalesforceTestFramework.UI.UITests
     public class AccountsPageTests : BaseTestUI
     {
         [Test]
-        [Description("Login test Positive")]
-        [AllureIssue("UI-123")]
+        [Description("Create Account Test")]
+        [AllureIssue("UI-1")]
         [AllureTms("TMS-456")]
-        [AllureDescription("Login Test Positive")]
+        [AllureDescription("Create Account Test")]
         [AllureOwner("Matvey Kylakovskiy")]
         [AllureLink("Website", "https://qatech5-dev-ed.develop.my.salesforce.com")]
         public void CreateAccountTest()
@@ -29,15 +29,12 @@ namespace SalesforceTestFramework.UI.UITests
             BaseNavigate.SaveEdit();
             Assert.That(AccountsPage.IsAccountCreated("Adv2"), Is.True);
 
-
             BaseNavigate.EditItem();
 
             AccountsPage.nameField.InputDataToField("New");
 
             BaseNavigate.SaveEdit();
             Assert.That(AccountsPage.IsAccountCreated("New"), Is.True);
-
-            
         }
     }
 }

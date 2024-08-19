@@ -9,12 +9,13 @@ namespace SalesforceTestFramework.UI.UITests
     public class BaseTestUI
     {
         public SettingsUI settingsUI;
+        private protected AllureLifecycle allure;
 
         [SetUp]
         public void Setup()
         {
             settingsUI = new SettingsUI();
-            
+            allure = AllureLifecycle.Instance;
             Driver.CreateDriver(settingsUI.Driver);
             Driver.GoUrl(settingsUI.URL);
             LoginPage.Login(settingsUI.Login, settingsUI.Password);
