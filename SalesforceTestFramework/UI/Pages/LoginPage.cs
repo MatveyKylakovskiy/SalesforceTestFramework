@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using PageObjectLib.Elements;
-using PageObjectLib.Factories;
 
 namespace SalesforceTestFramework.UI.Pages
 {
@@ -22,6 +21,5 @@ namespace SalesforceTestFramework.UI.Pages
         }
 
         public static bool IsElementExist(By locator) => WebElements.IsElementDisplayed(locator);
-
     }
 }

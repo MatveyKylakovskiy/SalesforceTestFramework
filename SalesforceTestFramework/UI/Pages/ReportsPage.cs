@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using PageObjectLib.Elements;
-using PageObjectLib.Factories;
 
 namespace SalesforceTestFramework.UI.Pages
 {
