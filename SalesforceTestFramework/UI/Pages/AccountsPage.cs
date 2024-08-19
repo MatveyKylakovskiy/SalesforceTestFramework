@@ -7,7 +7,7 @@ namespace SalesforceTestFramework.UI.Pages
     public class AccountsPage
     {
         public static NameField NameField = new();
-        public static WebsiteField SiteField = new();
+        public static WebsiteField WebSiteField = new();
         public static DescriptionField DescriptionField = new();
         public static BillingStritField BillingStritField = new();
         public static TypeField TypeField = new();

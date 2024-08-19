@@ -13,6 +13,6 @@ namespace SalesforceTestFramework.UI.Fields
             InputField().SendValue(data);
         }
 
-        //public void SelectField() => InputField().Click();      
+        public string GetFieldText() => InputField().GetText();    
     }
 }
