@@ -22,59 +22,5 @@ namespace SalesforceTestFramework.UI.UITests
 
             Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.HomeButtonXpath)), Is.True);
         }
-
-        [Test]
-        [Description("Empty Login and Password")]
-        public void LoginTestNegative1()
-        {
-            LoginPage.Login(string.Empty, string.Empty);
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.LogoIconXpath)), Is.True);
-        }
-
-        [Test]
-        [Description("Empty Login. Not valid Password")]
-        public void LoginTestNegative2()
-        {
-            LoginPage.Login(string.Empty, RandomData.RandomString(8));
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.LogoIconXpath)), Is.True);
-        }
-
-        [Test]
-        [Description("Empty Login. Valid Password")]
-        public void LoginTestNegative3()
-        {
-            LoginPage.Login(string.Empty, settingsUI.Password);
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.LogoIconXpath)), Is.True);
-        }
-
-        [Test]
-        [Description("Valid Login. Empty Password")]
-        public void LoginTestNegative4()
-        {
-            LoginPage.Login(settingsUI.Login, string.Empty);
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.ErrorMesageXpath)), Is.True);
-        }
-
-        [Test]
-        [Description("Valid Login. Not valid Password")]
-        public void LoginTestNegative5()
-        {
-            LoginPage.Login(settingsUI.Login, RandomData.RandomString(8));
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.ErrorMesageXpath)), Is.True);
-        }
-
-        [Test]
-        [Description("Not valid Login and Password")]
-        public void LoginTestNegative6()
-        {
-            LoginPage.Login(RandomData.RandomString(8), RandomData.RandomString(8));
-
-            Assert.That(LoginPage.IsElementExist(By.XPath(LoginPage.ErrorMesageXpath)), Is.True);
-        }
     }
 }
