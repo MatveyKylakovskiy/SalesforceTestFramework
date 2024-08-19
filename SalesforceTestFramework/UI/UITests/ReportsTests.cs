@@ -13,15 +13,11 @@ namespace SalesforceTestFramework.UI.UITests
             HomePage.MoveToReportsPage();
             BaseNavigate.CreateNewReport();
             
-            ReportsPage.CreateReport();
-
-
+            ReportsPage.CreateReport("Contacts & Accounts");
             ReportsPage.RenameReport("NewName");
+            ReportsPage.SaveReport();
             
-            BaseNavigate.SaveEdit();
-            
-
-            Assert.Pass();
+            Assert.That(ReportsPage.IsReportCreated("NewName"), Is.True);
         }
     }
 }
