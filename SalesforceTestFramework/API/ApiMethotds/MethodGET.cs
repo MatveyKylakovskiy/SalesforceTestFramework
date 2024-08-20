@@ -1,5 +1,4 @@
-﻿
-using RestSharp;
+﻿using RestSharp;
 
 namespace SalesforceTestFramework.API.ApiMethotds
 {

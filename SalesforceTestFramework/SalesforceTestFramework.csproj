@@ -65,4 +65,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="API\APIModels\Builders\" />
+    <Folder Include="API\APIModels\Models\Request\" />
+  </ItemGroup>
+
 </Project>

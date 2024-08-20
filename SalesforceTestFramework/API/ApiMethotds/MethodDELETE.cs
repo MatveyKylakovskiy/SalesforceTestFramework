@@ -1,7 +1,6 @@
-﻿
-using RestSharp;
+﻿using RestSharp;
 
-namespace HomeWork30APITest.ApiTests.ApiMethotds
+namespace SalesforceTestFramework.API.ApiMethotds
 {
     public class MethodDELETE : BaseMethod
     {

@@ -1,4 +1,4 @@
-﻿
+﻿using Newtonsoft.Json;
 using RestSharp;
 
 namespace SalesforceTestFramework.API.ApiMethotds
@@ -8,7 +8,8 @@ namespace SalesforceTestFramework.API.ApiMethotds
         public void SendPostMethod<T>(string resource, RestClient client, T jsonReq) where T : class
         {
             CreateRequest(resource, Method.Post);
-            _request.AddJsonBody(jsonReq);
+            var jsonBody = JsonConvert.SerializeObject(jsonReq);
+            _request.AddJsonBody(jsonBody);
             CreateResponse(client);
         }
 

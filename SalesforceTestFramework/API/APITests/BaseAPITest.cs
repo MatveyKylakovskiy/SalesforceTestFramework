@@ -1,17 +1,18 @@
-﻿using HomeWork30APITest.ApiTests.ApiMethotds;
-using RestSharp;
+﻿using RestSharp;
+using SalesforceTestFramework.AppSettings.AppSettingsAPI;
 
 namespace SalesforceTestFramework.API.APITests
 {
     public class BaseAPITest
     {
-        private const string BaseUrl = "https://reqres.in/api/";
         public RestClient client;
+        public SettingsAPI settingsAPI;
 
         [SetUp]
         public void Setup()
         {
-            client = new RestClient(BaseUrl);
+            settingsAPI = new SettingsAPI();
+            client = new RestClient(settingsAPI.MyDomain);
         }
 
         [TearDown]
