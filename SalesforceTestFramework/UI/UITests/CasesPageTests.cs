@@ -25,7 +25,7 @@ namespace SalesforceTestFramework.UI.UITests
             
             BaseNavigate.SaveEdit();
 
-            Assert.True(CasesPage.IsCaseCreated(subjectName));
+            Assert.That(CasesPage.IsCaseCreated(subjectName), Is.True);
         }
     }
 }
