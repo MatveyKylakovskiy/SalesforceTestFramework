@@ -67,17 +67,5 @@ namespace SalesforceTestFramework.UI.UITests
 ;
             Assert.That(OneAccountPage.GetPhoneNumber(), Is.EqualTo(newPhone));
         }
-
-        [Description("Add Activity to account")]
-        [Test]
-        public void AddActivityTest()
-        {
-            HomePage.MoveToAccountsPage();
-
-            AccountsPage.SelectAccount(settingsUI.BaseAccountName);
-
-
-            Assert.Pass();
-        }
     }
 }
