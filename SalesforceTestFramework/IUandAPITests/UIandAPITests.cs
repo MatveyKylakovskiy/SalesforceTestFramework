@@ -25,9 +25,13 @@ namespace SalesforceTestFramework.IUandAPI
                 Name = accountName
             };
 
+            request.AddJsonBody(accountData);
+
+            var response = client.Execute(request);
+
             HomePage.MoveToAccountsPage();
 
-            Assert.That(AccountsPage.IsAccountCreated(accountName), Is.True);
+            Assert.That(AccountsPage.IsAccountExist(accountName), Is.True);
         }
     }
 }

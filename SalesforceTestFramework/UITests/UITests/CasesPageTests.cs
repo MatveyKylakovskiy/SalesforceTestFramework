@@ -19,7 +19,6 @@ namespace SalesforceTestFramework.UI.UITests
 
             CasesPage.StatusField.SelectWorking();
             CasesPage.CaseOriginField.SelectEmail();
-            CasesPage.ContactNameField.InputDataToField(settingsUI.BaseContactName);
             CasesPage.AccountNameField.InputDataToField(settingsUI.BaseAccountName);
             CasesPage.SubjectField.InputDataToField(subjectName);
             

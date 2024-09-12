@@ -60,14 +60,14 @@
     <None Update="appSettingsUI.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="UI\Driver\PageObjectLib.dll">
+    <None Update="UITests\Driver\PageObjectLib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="API\APIModels\Builders\" />
-    <Folder Include="API\APIModels\Models\Request\" />
+    <Folder Include="APITests\APIModels\Builders\" />
+    <Folder Include="APITests\APIModels\Models\Request\" />
   </ItemGroup>
 
 </Project>

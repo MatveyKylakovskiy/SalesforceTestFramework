@@ -1,5 +1,4 @@
-﻿using NUnit.Allure.Attributes;
-using NUnit.Allure.Core;
+﻿using NUnit.Allure.Core;
 using PageObjectLib.Factories;
 using SalesforceTestFramework.Helpers;
 using SalesforceTestFramework.UI.Pages;

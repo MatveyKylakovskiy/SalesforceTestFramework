@@ -12,6 +12,7 @@ namespace SalesforceTestFramework.UI.Pages
         private static WebElements ReportNameField() => new(By.XPath("//*[@id='reportName']"));
         private static WebElements SaveReportButton() => new(By.XPath("//footer//button[text()='Save']"));
         private static WebElements CreatedReportName() => new(By.XPath("//span[contains(@class, 'slds-page')]"));
+
         public static void CreateReport(string reportName)
         {
             IFrameReportBuilder().SwitchToFrame();
